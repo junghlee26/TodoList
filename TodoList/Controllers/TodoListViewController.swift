@@ -95,7 +95,7 @@ class TodoListViewController: UITableViewController {
         
     }
     
-    // MARK: - Model Manupulation Methods
+    // MARK: - Model Manipulation Methods
     
     func saveItems() {
         do {
@@ -103,7 +103,7 @@ class TodoListViewController: UITableViewController {
         } catch {
             print("Error saving context \(error)")
         }
-        self.tableView.reloadData()
+        tableView.reloadData()
     }
     
     func loadItems(with request: NSFetchRequest<Item> = Item.fetchRequest(), predicate: NSPredicate? = nil) {
