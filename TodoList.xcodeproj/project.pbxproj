@@ -14,7 +14,8 @@
 		A037E633208A64FA00EE2C54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A037E631208A64FA00EE2C54 /* Main.storyboard */; };
 		A037E635208A64FC00EE2C54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A037E634208A64FC00EE2C54 /* Assets.xcassets */; };
 		A037E638208A64FC00EE2C54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A037E636208A64FC00EE2C54 /* LaunchScreen.storyboard */; };
-		A03D9D60209024AC008A5DE1 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A03D9D5E209024AC008A5DE1 /* DataModel.xcdatamodeld */; };
+		A0645E65209A7666000009E2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0645E64209A7666000009E2 /* Item.swift */; };
+		A0645E67209A766E000009E2 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0645E66209A766E000009E2 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +28,8 @@
 		A037E634208A64FC00EE2C54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A037E637208A64FC00EE2C54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A037E639208A64FC00EE2C54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A03D9D5F209024AC008A5DE1 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		A0645E64209A7666000009E2 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		A0645E66209A766E000009E2 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		D78DBD867C048B8F3D9E7F04 /* Pods-TodoList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoList.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodoList/Pods-TodoList.release.xcconfig"; sourceTree = "<group>"; };
 		DFF88C2DE5633F78E2ABA6F0 /* Pods-TodoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodoList/Pods-TodoList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,7 +97,8 @@
 		A037E641208BAD8B00EE2C54 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				A03D9D5E209024AC008A5DE1 /* DataModel.xcdatamodeld */,
+				A0645E66209A766E000009E2 /* Category.swift */,
+				A0645E64209A7666000009E2 /* Item.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -240,10 +243,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0645E65209A7666000009E2 /* Item.swift in Sources */,
 				A02F6FF820912EE30099C7B1 /* CategoryViewController.swift in Sources */,
 				A037E630208A64FA00EE2C54 /* TodoListViewController.swift in Sources */,
-				A03D9D60209024AC008A5DE1 /* DataModel.xcdatamodeld in Sources */,
 				A037E62E208A64FA00EE2C54 /* AppDelegate.swift in Sources */,
+				A0645E67209A766E000009E2 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,7 +394,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TodoList/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rawbridge.TodoList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -405,7 +412,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TodoList/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rawbridge.TodoList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -435,19 +445,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		A03D9D5E209024AC008A5DE1 /* DataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A03D9D5F209024AC008A5DE1 /* DataModel.xcdatamodel */,
-			);
-			currentVersion = A03D9D5F209024AC008A5DE1 /* DataModel.xcdatamodel */;
-			path = DataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = A037E622208A64FA00EE2C54 /* Project object */;
 }
